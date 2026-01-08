@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital University Library - Booklist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Digital University Library</h1>
+                    <p>Your Gateway to Knowledge</p>
+                </div>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booklist.html" class="active">Booklist</a></li>
+                        <li><a href="rules.html">Library Rules</a></li>
+                        <li><a href="timings.html">Timings</a></li>
+                        <li><a href="request.html">Book Request</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <h1 style="color: var(--primary-blue); text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Book Collection</h1>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Explore our extensive collection of books. Use the search functionality to find specific titles or authors, and click on column headers to sort the table.
+                </p>
+            </section>
+
+            <div class="search-container">
+                <label for="searchInput" class="sr-only">Search books</label>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search by title, author, genre, or year..."
+                    aria-describedby="searchHelp"
+                >
+                <div id="searchHelp" class="sr-only">Type to filter books in the table below</div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="bookTable" role="table" aria-label="Library book collection">
+                    <thead>
+                        <tr>
+                            <th data-sort="title" scope="col" aria-label="Sort by title">Title</th>
+                            <th data-sort="author" scope="col" aria-label="Sort by author">Author</th>
+                            <th data-sort="genre" scope="col" aria-label="Sort by genre">Genre</th>
+                            <th data-sort="year" scope="col" aria-label="Sort by publication year">Publication Year</th>
+                            <th data-sort="availability" scope="col" aria-label="Sort by availability">Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>To Kill a Mockingbird</td>
+                            <td>Harper Lee</td>
+                            <td>Classic Literature</td>
+                            <td>1960</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>1984</td>
+                            <td>George Orwell</td>
+                            <td>Dystopian Fiction</td>
+                            <td>1949</td>
+                            <td><span class="unavailable">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Clean Code</td>
+                            <td>Robert C. Martin</td>
+                            <td>Programming</td>
+                            <td>2008</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Great Gatsby</td>
+                            <td>F. Scott Fitzgerald</td>
+                            <td>Classic Literature</td>
+                            <td>1925</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Introduction to Algorithms</td>
+                            <td>Thomas H. Cormen</td>
+                            <td>Computer Science</td>
+                            <td>2009</td>
+                            <td><span class="unavailable">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pride and Prejudice</td>
+                            <td>Jane Austen</td>
+                            <td>Romance</td>
+                            <td>1813</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Catcher in the Rye</td>
+                            <td>J.D. Salinger</td>
+                            <td>Coming of Age</td>
+                            <td>1951</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Harry Potter and the Philosopher's Stone</td>
+                            <td>J.K. Rowling</td>
+                            <td>Fantasy</td>
+                            <td>1997</td>
+                            <td><span class="unavailable">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Lord of the Rings</td>
+                            <td>J.R.R. Tolkien</td>
+                            <td>Fantasy</td>
+                            <td>1954</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sapiens: A Brief History of Humankind</td>
+                            <td>Yuval Noah Harari</td>
+                            <td>History</td>
+                            <td>2011</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Art of Computer Programming</td>
+                            <td>Donald E. Knuth</td>
+                            <td>Computer Science</td>
+                            <td>1968</td>
+                            <td><span class="unavailable">No</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Eyre</td>
+                            <td>Charlotte Brontë</td>
+                            <td>Gothic Romance</td>
+                            <td>1847</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Design Patterns</td>
+                            <td>Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</td>
+                            <td>Programming</td>
+                            <td>1994</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Hobbit</td>
+                            <td>J.R.R. Tolkien</td>
+                            <td>Fantasy</td>
+                            <td>1937</td>
+                            <td><span class="available">Yes</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <section class="library-info" style="margin-top: 3rem; text-align: center;">
+                <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Can't Find What You're Looking For?</h2>
+                <p style="margin-bottom: 1.5rem;">Request a book through our book request form and we'll do our best to add it to our collection.</p>
+                <a href="request.html" class="cta-button">Request a Book</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2026 Digital University Library. All rights reserved.</p>
+                </div>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="#" aria-label="Follow us on Twitter" title="Twitter">
+                        <span style="font-size: 1.5rem;">🐦</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on Facebook" title="Facebook">
+                        <span style="font-size: 1.5rem;">📘</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram" title="Instagram">
+                        <span style="font-size: 1.5rem;">📷</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on LinkedIn" title="LinkedIn">
+                        <span style="font-size: 1.5rem;">💼</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

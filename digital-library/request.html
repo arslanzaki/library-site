@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital University Library - Book Request</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Digital University Library</h1>
+                    <p>Your Gateway to Knowledge</p>
+                </div>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="booklist.html">Booklist</a></li>
+                        <li><a href="rules.html">Library Rules</a></li>
+                        <li><a href="timings.html">Timings</a></li>
+                        <li><a href="request.html" class="active">Book Request</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <h1 style="color: var(--primary-blue); text-align: center; margin-bottom: 1rem; font-size: 2.5rem;">Book Request Form</h1>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Can't find a book in our collection? Request it here and we'll do our best to add it to our library. Please provide accurate information to help us process your request efficiently.
+                </p>
+            </section>
+
+            <div class="form-container">
+                <form id="bookRequestForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span style="color: #dc3545;">*</span></label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            required 
+                            aria-describedby="fullNameError"
+                            placeholder="Enter your full name"
+                        >
+                        <div class="error" id="fullNameError" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span style="color: #dc3545;">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            aria-describedby="emailError"
+                            placeholder="your.email@university.edu"
+                        >
+                        <div class="error" id="emailError" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input 
+                            type="text" 
+                            id="studentId" 
+                            name="studentId" 
+                            aria-describedby="studentIdHelp"
+                            placeholder="Enter your student ID (optional)"
+                        >
+                        <div id="studentIdHelp" class="sr-only">Student ID is optional but helps us process your request faster</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookTitle">Book Title <span style="color: #dc3545;">*</span></label>
+                        <input 
+                            type="text" 
+                            id="bookTitle" 
+                            name="bookTitle" 
+                            required 
+                            aria-describedby="bookTitleError"
+                            placeholder="Enter the complete book title"
+                        >
+                        <div class="error" id="bookTitleError" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Request <span style="color: #dc3545;">*</span></label>
+                        <textarea 
+                            id="reason" 
+                            name="reason" 
+                            required 
+                            aria-describedby="reasonError"
+                            placeholder="Please explain why you need this book (e.g., course assignment, research project, personal interest)"
+                            rows="4"
+                        ></textarea>
+                        <div class="error" id="reasonError" role="alert"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+
+            <section class="request-info" style="margin-top: 3rem; background: var(--light-gray); padding: 2rem; border-radius: 10px;">
+                <h2 style="color: var(--primary-blue); text-align: center; margin-bottom: 2rem;">What Happens Next?</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <div style="background: var(--accent-gold); color: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.2rem;">1</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Request Review</h3>
+                        <p>Our library staff will review your request within 2-3 business days.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: var(--accent-gold); color: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.2rem;">2</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Availability Check</h3>
+                        <p>We'll check if the book is available from publishers or other libraries.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: var(--accent-gold); color: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.2rem;">3</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Notification</h3>
+                        <p>You'll receive an email notification about the status of your request.</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: var(--accent-gold); color: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; font-size: 1.2rem;">4</div>
+                        <h3 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Ready for Pickup</h3>
+                        <p>If approved, the book will be available for pickup within 1-2 weeks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alternative-options" style="margin-top: 2rem; text-align: center;">
+                <h2 style="color: var(--primary-blue); margin-bottom: 1rem;">Looking for Something Else?</h2>
+                <p style="margin-bottom: 1.5rem;">Check out these alternative options:</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="booklist.html" class="cta-button" style="text-decoration: none; display: inline-block;">Browse Current Collection</a>
+                    <a href="rules.html" class="cta-button" style="text-decoration: none; display: inline-block; background: var(--primary-blue); color: var(--primary-white);">Library Policies</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2026 Digital University Library. All rights reserved.</p>
+                </div>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="#" aria-label="Follow us on Twitter" title="Twitter">
+                        <span style="font-size: 1.5rem;">🐦</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on Facebook" title="Facebook">
+                        <span style="font-size: 1.5rem;">📘</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram" title="Instagram">
+                        <span style="font-size: 1.5rem;">📷</span>
+                    </a>
+                    <a href="#" aria-label="Follow us on LinkedIn" title="LinkedIn">
+                        <span style="font-size: 1.5rem;">💼</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
